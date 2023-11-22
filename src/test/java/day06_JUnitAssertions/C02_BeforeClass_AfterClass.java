@@ -58,10 +58,9 @@ public class C02_BeforeClass_AfterClass {
     public void test01(){
         // url testi
         // 1- testotomasyonu.com sayfasina gidin,
-
-        //    url'in testotomasyonu icerdigini test edin
         driver.get("https://www.testotomasyonu.com");
 
+        //    url'in testotomasyonu icerdigini test edin
         String expectedUrlIcerik = "testotomasyonu";
         String actualUrl = driver.getCurrentUrl();
 

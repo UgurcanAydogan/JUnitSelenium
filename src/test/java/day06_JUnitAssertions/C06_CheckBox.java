@@ -20,7 +20,7 @@ public class C06_CheckBox {
     WebDriver driver;
 
     @Before
-    public void setup() {
+    public void setup(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -28,16 +28,15 @@ public class C06_CheckBox {
     }
 
     @After
-    public void teardown() {
+    public void teardown(){
         driver.quit();
     }
 
     @Test
-    public void checkboxTesti() {
+    public void checkboxTesti(){
         //	a. Verilen web sayfasına gidin.
         //	     https://testotomasyonu.com/form
         driver.get("https://testotomasyonu.com/form");
-
         //	b. Sirt Agrisi ve Carpinti checkbox’larini secin
         WebElement sirtAgrisiCheckBox = driver.findElement(By.id("gridCheck5"));
         sirtAgrisiCheckBox.click();
@@ -52,7 +51,6 @@ public class C06_CheckBox {
         Assert.assertTrue(carpintiCheckBox.isSelected());
 
         carpintiCheckBox.sendKeys(Keys.PAGE_DOWN);
-        ReusableMethods.bekle(3);
 
         //	d. Seker ve Epilepsi checkbox’larininin seçili
         //  	olmadigini test edin
