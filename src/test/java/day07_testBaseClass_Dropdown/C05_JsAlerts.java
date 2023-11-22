@@ -14,13 +14,14 @@ public class C05_JsAlerts extends TestBase {
     @Test
     public void jsBasicAlert(){
         //1. Test
+
         //	-  https://testotomasyonu.com/javascriptAlert adresine gidin
         driver.get("https://testotomasyonu.com/javascriptAlert");
+
         //	- 1.alert'e tiklayin
         driver.findElement(By.xpath("//*[@onclick = 'jsAlert()']")).click();
 
         //	-  Alert'deki yazinin "I am a JS Alert" oldugunu test edin
-
         String expectedAlertyazisi = "I am a JS Alert";
         String actualAlertYazisi = driver.switchTo().alert().getText();
         Assert.assertEquals(expectedAlertyazisi,actualAlertYazisi);
@@ -34,18 +35,19 @@ public class C05_JsAlerts extends TestBase {
     @Test
     public void jsConfirmAlert(){
         //2.Test
+
         //	- https://testotomasyonu.com/javascriptAlert adresine gidin
         driver.get("https://testotomasyonu.com/javascriptAlert");
+
         //	- 2.alert'e tiklayalim jsConfirm()
         driver.findElement(By.xpath("//*[@onclick = 'jsConfirm()']")).click();
-        //	- Cancel'a basip,
 
+        //	- Cancel'a basip,
         ReusableMethods.bekle(2);
 
         driver.switchTo().alert().dismiss();
 
         //	cikan sonuc yazisinin "You clicked: Cancel" oldugunu test edin
-
         WebElement resultYaziElementi = driver.findElement(By.xpath("//p[@id='result']"));
 
         String expectedResultYazisi ="You clicked: Cancel";
@@ -59,15 +61,17 @@ public class C05_JsAlerts extends TestBase {
     @Test
     public void jsPromptTesti(){
         //3.Test
+
         //	- https://testotomasyonu.com/javascriptAlert adresine gidin
         driver.get("https://testotomasyonu.com/javascriptAlert");
+
         //	- 3.alert'e tiklayalim
-
         driver.findElement(By.xpath("//*[@onclick = 'jsPrompt()']")).click();
-        //	- Cikan prompt ekranina "Abdullah" yazdiralim
 
+        //	- Cikan prompt ekranina "Abdullah" yazdiralim
         driver.switchTo().alert().sendKeys("Abdullah");
         ReusableMethods.bekle(5);
+
         //	- OK tusuna basarak alert'i kapatalim
         driver.switchTo().alert().accept();
 

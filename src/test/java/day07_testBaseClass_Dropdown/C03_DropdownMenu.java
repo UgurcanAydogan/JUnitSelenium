@@ -18,6 +18,7 @@ public class C03_DropdownMenu extends TestBase {
         driver.get("https://testotomasyonu.com/form");
 
         //	1.Dogum tarihi gun seçeneğinden index kullanarak 5’i secin
+
         // - ilk adim : kullanacagimiz ddm locate edip kaydedelim
         WebElement dogumGunuDdm = driver.findElement(By.xpath("(//select[@class='form-control'])[1]"));
 

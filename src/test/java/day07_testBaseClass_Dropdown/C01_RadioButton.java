@@ -37,6 +37,7 @@ public class C01_RadioButton {
         //	a. Verilen web sayfasına gidin.
         //	      https://testotomasyonu.com/form
         driver.get("https://testotomasyonu.com/form");
+
         //	b. Cinsiyet Radio button elementlerini locate edin ve
         //     radio buttonu isaretleyerek size uygun olani secin
         WebElement kadinRadioButton = driver.findElement(By.id("inlineRadio1"));
@@ -44,6 +45,7 @@ public class C01_RadioButton {
         WebElement digerRadioButton = driver.findElement(By.id("inlineRadio3"));
 
         erkekRadioButton.click();
+
         //	c. Sectiginiz radio button’un seçili, ötekilerin seçili olmadigini test edin
 
         Assert.assertTrue(erkekRadioButton.isSelected());
