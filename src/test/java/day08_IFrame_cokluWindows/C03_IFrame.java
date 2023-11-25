@@ -34,6 +34,7 @@ public class C03_IFrame extends TestBase {
         //4) ilk iframe'deki (Youtube) play butonuna tıklayınız.
         WebElement playIFrame = driver.findElement(By.xpath("(//iframe)[4]"));
         driver.switchTo().frame(playIFrame);
+        ReusableMethods.bekle(3);
 
         driver.findElement(By.xpath("//button[@title='Oynat']")).click();
         ReusableMethods.bekle(2);

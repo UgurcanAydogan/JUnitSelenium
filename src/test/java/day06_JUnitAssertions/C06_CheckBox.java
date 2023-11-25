@@ -39,6 +39,7 @@ public class C06_CheckBox {
         driver.get("https://testotomasyonu.com/form");
         //	b. Sirt Agrisi ve Carpinti checkbox’larini secin
         WebElement sirtAgrisiCheckBox = driver.findElement(By.id("gridCheck5"));
+        ReusableMethods.bekle(3);
         sirtAgrisiCheckBox.click();
 
         WebElement carpintiCheckBox = driver.findElement(By.id("gridCheck4"));
