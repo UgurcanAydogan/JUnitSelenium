@@ -18,18 +18,22 @@ public class C02_Odev2 extends TestBase {
         //● https://testotomasyonu.com/addremove/ adresine gidin.
         driver.get("https://testotomasyonu.com/addremove/");
         String ilkSayfaWhd= driver.getWindowHandle();
+
         //● Sayfadaki textin “Add/Remove Elements” olduğunu doğrulayın.
         WebElement yaziElementi = driver.findElement(By.tagName("h2"));
         String expectedYazi = "Add/Remove Elements";
         String actualYazi = yaziElementi.getText();
         Assert.assertEquals(expectedYazi,actualYazi);
+
         //● Sayfa başlığının(title) “Test Otomasyonu” olduğunu doğrulayın.
         String expectedTitle = "Test Otomasyonu";
         String actualTitle = driver.getTitle();
         Assert.assertEquals(expectedTitle,actualTitle);
+
         //● ’Please click for Electronics Products’ linkine tiklayin.
         ReusableMethods.bekle(2);
         driver.findElement(By.linkText("Electronics Products")).click();
+
         //● Electronics sayfasinin acildigini test edin
 
         String ikinciWhd = ReusableMethods.ilkSayfaWhdIleIkinciSayfaWhdBul(driver,ilkSayfaWhd);
@@ -43,8 +47,10 @@ public class C02_Odev2 extends TestBase {
 
         Assert.assertEquals(expectedSonucSayisi,actualSonucSayisi);
         ReusableMethods.bekle(2);
+
         //● Ilk actiginiz addremove sayfasina donun
         driver.switchTo().window(ilkSayfaWhd);
+
         //● Url’in addremove icerdigini test edin
 
         String expectedUrlIcerik = "addremove";
