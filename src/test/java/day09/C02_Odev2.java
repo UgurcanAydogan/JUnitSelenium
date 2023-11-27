@@ -1,31 +1,17 @@
 package day09;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WindowType;
-import org.openqa.selenium.chrome.ChromeDriver;
 import utilities.ReusableMethods;
 import utilities.TestBase;
 
-import java.time.Duration;
-import java.util.Set;
 
-public class C01_Odev extends TestBase {
-
-    /*
-        Kontrolsuz bir tab/window acildiginda
-        eger yeni acilan tab/window'un title degeri biliniyorsa
-        driver'i acilan sayfaya geciren bir method olusturun
-
-        input : yeniTitle , Test Otomasyonu - Electronics
-
-     */
+public class C02_Odev2 extends TestBase {
+    // icinde oldugumuz sayfa ve driver'i input olarak alip
+    // ikinci sayfa Window Handle Degerini bize donduren
+    // bir method kullanalim
 
     @Test
     public void test01(){
@@ -46,7 +32,8 @@ public class C01_Odev extends TestBase {
         driver.findElement(By.linkText("Electronics Products")).click();
         //● Electronics sayfasinin acildigini test edin
 
-        driver = ReusableMethods.titleIleSayfaDegistir(driver,"Test Otomasyonu - Electronics");
+        String ikinciWhd = ReusableMethods.ilkSayfaWhdIleIkinciSayfaWhdBul(driver,ilkSayfaWhd);
+        driver.switchTo().window(ikinciWhd);
 
         //● Bulunan urun sayisinin 16 olduğunu test edin
         WebElement sonucYaziElementi = driver.findElement(By.xpath("//*[@*='product-count-text']"));
@@ -67,13 +54,4 @@ public class C01_Odev extends TestBase {
         ReusableMethods.bekle(2);
     }
 }
-
-
-
-
-
-
-
-
-
-
+}

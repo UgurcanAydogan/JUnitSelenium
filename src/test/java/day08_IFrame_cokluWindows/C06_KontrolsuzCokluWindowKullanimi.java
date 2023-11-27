@@ -21,6 +21,7 @@ public class C06_KontrolsuzCokluWindowKullanimi extends TestBase {
         String expectedYazi = "Add/Remove Elements";
         String actualYazi = yaziElementi.getText();
         Assert.assertEquals(expectedYazi,actualYazi);
+
         //● Sayfa başlığının(title) “Test Otomasyonu” olduğunu doğrulayın.
 
         String expectedTitle = "Test Otomasyonu";
