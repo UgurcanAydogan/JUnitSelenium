@@ -20,9 +20,10 @@ public class C05_ProjeIcindekiDosyaTesti {
         Assert.assertTrue(Files.exists(Paths.get(dosyaYolu)));
 
         //  Herkeste farkli olan kisim ==> user.dir
-        //         /Users/ahmetbulutluoz/Desktop/My Desktop/course/projeler/com.team127_JUnit
+        //         C:\Users\\ugurc\\IdeaProjects\\com.team127_JUnit
+
         // Herkeste ayni olan kisim ==> projenin icindeki dosya yolu
-        //        /src/test/java/tests/day10_actions_faker_fileTestleri/deneme.txt";
+        //        \\src\\test\\java\\day10_actions_facar_fileTestleri\\deneme.txt";
 
         String dinamikDosyaYolu = System.getProperty("user.dir") +
                 "\\src\\test\\java\\day10_actions_facar_fileTestleri\\deneme.txt";
