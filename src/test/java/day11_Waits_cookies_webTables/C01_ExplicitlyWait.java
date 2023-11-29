@@ -1,4 +1,4 @@
-package day11_Waits_cookies;
+package day11_Waits_cookies_webTables;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utilities.ReusableMethods;
 
 import java.time.Duration;
 

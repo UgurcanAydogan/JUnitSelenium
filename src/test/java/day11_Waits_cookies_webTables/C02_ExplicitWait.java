@@ -1,4 +1,4 @@
-package day11_Waits_cookies;
+package day11_Waits_cookies_webTables;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
