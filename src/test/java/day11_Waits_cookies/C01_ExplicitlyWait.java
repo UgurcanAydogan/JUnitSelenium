@@ -53,8 +53,10 @@ public class C01_ExplicitlyWait {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
         //3. https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
+
         //4. Remove butonuna basin.
         driver.findElement(By.xpath("//*[text()='Remove']")).click();
 
@@ -77,10 +79,10 @@ public class C01_ExplicitlyWait {
 
              */
 
-        // 1.adim : bir wait objesi olusturun
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-        // 2. adim : bekleme icin olusturdugumuz wait objesini kullanarak
-        //           beklenecek webElementin locate'ini ve beklemeyi birlikte yapariz
+                   // 1.adim : bir wait objesi olusturun
+                   WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+                   // 2. adim : bekleme icin olusturdugumuz wait objesini kullanarak
+                   //           beklenecek webElementin locate'ini ve beklemeyi birlikte yapariz
 
         WebElement itsGoneyaziElementi =
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()=\"It's gone!\"]")));
