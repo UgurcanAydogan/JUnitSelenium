@@ -14,6 +14,7 @@ public class C03_Cookies extends TestBase {
     public void cookitestleri(){
         //1- amazon anasayfaya gidin
         driver.get("https://www.amazon.com");
+
         //2- tum cookie’leri listeleyin
         Set<Cookie> cookiesSeti = driver.manage().getCookies();
 
@@ -24,6 +25,7 @@ public class C03_Cookies extends TestBase {
             System.out.println(siraNo + "=====> " + each);
             siraNo++;
         }
+
         //3- Sayfadaki cookies sayisinin 5’den buyuk oldugunu test edin
 
         int expectedMinCookieSayisi = 5;
@@ -33,6 +35,7 @@ public class C03_Cookies extends TestBase {
         String expectedCookieValue = "USD";
         String actualCookieValue = driver.manage().getCookieNamed("i18n-prefs").getValue();
         Assert.assertEquals(expectedCookieValue,actualCookieValue);
+
         //5- ismi “en sevdigim cookie” ve degeri “cikolatali” olan bir cookie olusturun ve sayfaya ekleyin
 
         Cookie yeniCookie = new Cookie("en sevdigim cookie","cikolatali");
@@ -55,8 +58,7 @@ public class C03_Cookies extends TestBase {
         Assert.assertEquals(expectedCookieValue,actualCookieValue);
 
         //7- ismi skin olan cookie’yi silin ve silindigini test edin
-
-        // olmayan bir cookie'nin degerini yazdirsak
+        //   olmayan bir cookie'nin degerini yazdirsak
         System.out.println(driver.manage().getCookieNamed("Boyle bir cookie yok")); // null
 
         driver.manage().deleteCookieNamed("skin");
