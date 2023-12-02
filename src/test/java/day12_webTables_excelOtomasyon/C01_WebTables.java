@@ -73,9 +73,7 @@ public class C01_WebTables extends TestBase {
         istedenHucredekiDatayiYazdir(1,2); // Istenen hucredeki data : Electronics
 
         // yukardaki gorevi method'u kullanarak yapalim
-
-        // Tabloda " Category" si Furniture olan urunun fiyatini yazdirin
-
+        // Tabloda " Category" si Furniture olan urunun fiyatini dondurun
         String satirdakiKategoriDegeri ="";
         String satirdakiFiyatDegeri="";
 
