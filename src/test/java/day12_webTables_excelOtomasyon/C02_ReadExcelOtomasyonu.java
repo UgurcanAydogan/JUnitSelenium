@@ -31,7 +31,7 @@ public class C02_ReadExcelOtomasyonu {
             ONEMLI NOT :
             bu test methodu icinde yaptigimiz tum islemler
             excel uzerinde degil
-            36.satirin calistigi anda excel'de varolan bilgiler uzerindedir
+            39.satirin calistigi anda excel'de varolan bilgiler uzerindedir
 
             satir ve sutun bilgileri index ile calisir
             yani 0'dan baslar
