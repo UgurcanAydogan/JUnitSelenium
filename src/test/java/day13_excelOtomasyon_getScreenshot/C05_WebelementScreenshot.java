@@ -32,6 +32,7 @@ public class C05_WebelementScreenshot extends TestBase {
         Assert.assertNotEquals(unExpectedAramaSonucu,actualAramaSonucu);
 
         ReusableMethods.bekle(3);
+
         // arama sonuc yazisinin screenshot'ini kaydedin
 
         // 1.adim screenshot alacagimiz webelementi locate et
